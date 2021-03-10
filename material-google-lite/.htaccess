@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^home index.php [QSA]
+RewriteRule ^([a-zA-Z0-9]*)$ home.php?pages=$1 [QSA]
